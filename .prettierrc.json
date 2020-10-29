@@ -1,0 +1,5 @@
+{
+    "tabWidth": 2,        // numero de espacios en los taps 
+    "semi": true,         // que se utilice ; 
+    "singleQuote": true   // comillas simples no dobles
+  }
