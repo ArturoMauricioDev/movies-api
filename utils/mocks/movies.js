@@ -1,5 +1,5 @@
 const moviesMock = [{
-        id: 'd2a4a062-d256-41bb-b1b2-9d915af6b75e',
+        id: '5ee306da9083a63e7b376de8',
         title: 'Notti bianche, Le (White Nights)',
         year: 2019,
         cover: 'http://dummyimage.com/800x600.png/ff4444/ffffff',
@@ -140,6 +140,19 @@ const moviesMock = [{
     }
 ];
 
+function filteredMoviesMock(tag) {
+    return moviesMock.filter(movie => movie.tags.includes(tag))
+}
+class MoviesServiceMock {
+    async getMovies() {
+        return Promise.resolve(moviesMock)
+    }
+    async createMovie() {
+        return Promise.resolve(moviesMock[0])
+    }
+}
 module.exports = {
-    moviesMock
+    moviesMock,
+    filteredMoviesMock,
+    MoviesServiceMock
 };
